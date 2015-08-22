@@ -1,0 +1,1687 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ca",
+				"camera"
+			],
+			[
+				"fa",
+				"frag_pos"
+			],
+			[
+				"ad",
+				"add_yaw"
+			],
+			[
+				"_",
+				"_yaw"
+			],
+			[
+				"sc",
+				"screw_index"
+			],
+			[
+				"lig",
+				"ligh_pos"
+			],
+			[
+				"no",
+				"normalfrag"
+			],
+			[
+				"cma",
+				"camera"
+			],
+			[
+				"sha",
+				"shatranslate"
+			],
+			[
+				"cam_p",
+				"cam_poss"
+			],
+			[
+				"cam",
+				"camera"
+			],
+			[
+				"light_",
+				"light_position"
+			],
+			[
+				"spe",
+				"spec"
+			],
+			[
+				"GL_",
+				"GL_TRUE"
+			],
+			[
+				"GL",
+				"GL_FALSE"
+			],
+			[
+				"nor",
+				"normal"
+			],
+			[
+				"sp",
+				"specular"
+			],
+			[
+				"f",
+				"frag_pos"
+			],
+			[
+				"v",
+				"view_direction"
+			],
+			[
+				"light",
+				"light_position"
+			],
+			[
+				"li",
+				"light_position"
+			],
+			[
+				"cos",
+				"cosAngle"
+			],
+			[
+				"ref",
+				"reflection_vector"
+			],
+			[
+				"su",
+				"surface_to_camera"
+			],
+			[
+				"norm",
+				"normalize"
+			],
+			[
+				"dif",
+				"diff_light"
+			],
+			[
+				"diff",
+				"diff_light"
+			],
+			[
+				"inv",
+				"inv_camera"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"ligh",
+				"light_spec"
+			],
+			[
+				"co",
+				"compnent_wise_product"
+			],
+			[
+				"vbo",
+				"vbocolor"
+			],
+			[
+				"glUni",
+				"glUniform4fv"
+			],
+			[
+				"GL_FL",
+				"GL_FLOAT"
+			],
+			[
+				"noma",
+				"normal_index"
+			],
+			[
+				"norl_",
+				"normal_index"
+			],
+			[
+				"normal_",
+				"normal_index"
+			],
+			[
+				"color",
+				"color_d"
+			],
+			[
+				"cu",
+				"cubea"
+			],
+			[
+				"tri",
+				"triangle_per_quad"
+			],
+			[
+				"qu",
+				"quad_per_face"
+			],
+			[
+				"nu",
+				"num_div"
+			],
+			[
+				"n",
+				"num_div"
+			],
+			[
+				"cube",
+				"cubea"
+			],
+			[
+				"po",
+				"points_per_triangle"
+			],
+			[
+				"div_trig_",
+				"div_trig_color"
+			],
+			[
+				"tir",
+				"triangle_per_div"
+			],
+			[
+				"sub",
+				"subs"
+			],
+			[
+				"cm",
+				"cam"
+			],
+			[
+				"ar",
+				"array"
+			],
+			[
+				"sr",
+				"SRC_DIR"
+			],
+			[
+				"di",
+				"diffTerm"
+			],
+			[
+				"an",
+				"ang"
+			],
+			[
+				"move",
+				"moveCamera"
+			],
+			[
+				"la",
+				"lamna"
+			],
+			[
+				"ve",
+				"vec3"
+			],
+			[
+				"get",
+				"get_matrix"
+			],
+			[
+				"bo",
+				"booo"
+			],
+			[
+				"mov",
+				"movingLight"
+			],
+			[
+				"strig",
+				"stringtodegree"
+			],
+			[
+				"stri",
+				"stringtodegree"
+			],
+			[
+				"mi",
+				"MidPoint"
+			],
+			[
+				"tru",
+				"true"
+			],
+			[
+				"h",
+				"Heun"
+			],
+			[
+				"tr",
+				"trufunc"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"Ei",
+				"EularDiffMod"
+			],
+			[
+				"spl",
+				"Split"
+			],
+			[
+				"test",
+				"tests"
+			],
+			[
+				"dis",
+				"dist"
+			],
+			[
+				"lp",
+				"lpos2"
+			],
+			[
+				"dist",
+				"dist2"
+			],
+			[
+				"add",
+				"add_pitch"
+			],
+			[
+				"reu",
+				"return"
+			],
+			[
+				"dir",
+				"dir_rot"
+			],
+			[
+				"sh",
+				"sharotatey"
+			],
+			[
+				"PRE",
+				"GLFW_PRESS"
+			],
+			[
+				"inc",
+				"increase_yaw"
+			],
+			[
+				"scre",
+				"SCREEN_SIZE_X"
+			],
+			[
+				"SCRE",
+				"SCREEN_SIZE_Y"
+			],
+			[
+				"y",
+				"yxur"
+			],
+			[
+				"ot",
+				"ortho"
+			],
+			[
+				"_re",
+				"_rect_num"
+			],
+			[
+				"rec",
+				"_rect_height"
+			],
+			[
+				"ma",
+				"mat4"
+			],
+			[
+				"sn",
+				"snake_tail"
+			],
+			[
+				"snak",
+				"snake"
+			],
+			[
+				"snkae",
+				"snake_tail"
+			],
+			[
+				"head",
+				"headmove"
+			],
+			[
+				"GLF",
+				"GLFW_PRESS"
+			],
+			[
+				"GLFw",
+				"GLFWwindow"
+			],
+			[
+				"sh_",
+				"sh_rect"
+			],
+			[
+				"set_c",
+				"set_center"
+			],
+			[
+				"glDy",
+				"GL_DYNAMIC_DRAW"
+			],
+			[
+				"GL_TRI",
+				"GL_TRIANGLE_FAN"
+			],
+			[
+				"GL_LINE",
+				"GL_LINES"
+			],
+			[
+				"GL_TR",
+				"GL_TRIANGLE_FAN"
+			],
+			[
+				"GLFW",
+				"GLFW_PRESS"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"l",
+				"lalas"
+			],
+			[
+				"rect",
+				"rect_height"
+			],
+			[
+				"x",
+				"x-50"
+			],
+			[
+				"SC",
+				"SCREEN_SIZE_Y"
+			],
+			[
+				"he",
+				"_height"
+			],
+			[
+				"wh",
+				"w_height"
+			],
+			[
+				"w",
+				"w_height"
+			],
+			[
+				"sharo",
+				"sharotatey"
+			],
+			[
+				"cur",
+				"curx"
+			],
+			[
+				"prev",
+				"prevx"
+			],
+			[
+				"pre",
+				"prevx"
+			],
+			[
+				"s",
+				"sharotatey"
+			],
+			[
+				"new_a",
+				"new_angle"
+			],
+			[
+				"newa",
+				"new_angle"
+			],
+			[
+				"angle",
+				"anglex"
+			],
+			[
+				"new",
+				"new_angle"
+			],
+			[
+				"point",
+				"point4"
+			],
+			[
+				"pale",
+				"plane_vbo"
+			],
+			[
+				"pla",
+				"planes"
+			],
+			[
+				"lvin",
+				"lvin2"
+			],
+			[
+				"lv",
+				"lvin2"
+			],
+			[
+				"lvi",
+				"lvin"
+			],
+			[
+				"colo",
+				"colorcube"
+			],
+			[
+				"glfw",
+				"glfwWindowHint"
+			],
+			[
+				"mathtb",
+				"mathbb{text}	latex-document"
+			],
+			[
+				"temp",
+				"tempfunctor	Unary template functor"
+			],
+			[
+				"tem",
+				"temv	variadic template"
+			],
+			[
+				"glv",
+				"glBindVertexArray"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 9839,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/grid.cpp",
+			"settings":
+			{
+				"buffer_size": 2637,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "header/grid.h",
+			"settings":
+			{
+				"buffer_size": 489,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "build/frgt.glsl",
+			"settings":
+			{
+				"buffer_size": 2668,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "build/vert.glsl",
+			"settings":
+			{
+				"buffer_size": 1091,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 262.0,
+		"last_filter": "c++",
+		"selected_items":
+		[
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"c+",
+				"Set Syntax: C++"
+			],
+			[
+				"g",
+				"Set Syntax: OpenGL SL"
+			],
+			[
+				"glsl",
+				"Set Syntax: OpenGL SL"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"jav",
+				"Set Syntax: Java"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"c",
+				"Set Syntax: C++"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"gls",
+				"Set Syntax: OpenGL SL"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"la",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"lteax",
+				"LaTeXing: Clean up (Remove) all Nonessential Files"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"pdf",
+				"LaTeXing: Open PDF"
+			],
+			[
+				"ope",
+				"LaTeXing: Open PDF"
+			],
+			[
+				"open",
+				"LaTeXing: Open PDF"
+			],
+			[
+				"l",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"",
+				"AlignTab: Live Preview Mode"
+			],
+			[
+				"set",
+				"Set Syntax: TeX"
+			],
+			[
+				"gdb",
+				"Preferences: SublimeGDB Settings – Default"
+			]
+		],
+		"width": 584.0
+	},
+	"console":
+	{
+		"height": 451.0,
+		"history":
+		[
+			"view.run_command('build_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('run_file_out')",
+			"view.run_command('run_project')",
+			"view.run_command('build_run_project')",
+			"view.run_command('build_project')",
+			"view.run_command('run_project')",
+			"view.run_command('build_run_project')",
+			"view.run_command('build_project')",
+			"view.run_command('clean_project')",
+			"view.run_command('build_project')",
+			"view.run_command('clean_project')",
+			"view.run_command('build_project')",
+			"view.run_command('run_project')",
+			"view.run_command('build_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('build_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('build_project')",
+			"view.run_command('build')",
+			"view.run_command('build_project')",
+			"view.run_command('build')",
+			"view.run_command('build_project')",
+			"view.run_command('build')",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"view.run_command('cpp_builder')",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"view.run_command('new_cpp')",
+			"view.run_command('make_project')",
+			"view.run_command('new_cpp')",
+			"view.run_command('make_project')",
+			"view.run_command('new_cpp')",
+			"view.run_command('make_project')",
+			"view.run_command('new_cpp')",
+			"view.run_command('make_project')",
+			"view.run_command('new_cpp')",
+			"view.run_command('make_project')",
+			"view.run_command('new_cpp')",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('new_cpp')",
+			"print(\"\\n\"*100)",
+			"view.run_command('test')",
+			"print(\"\\n\"*100)",
+			"view.run_command('test')",
+			"print(\"\\n\"*100)",
+			"view.run_command('test')",
+			"print(\"\\n\"*100)",
+			"view.run_command('test')",
+			"print(\"\\n\"*100)",
+			"view.run_command('cpp_builder')",
+			"view.run_command('new_cpp')",
+			"view.run_command('cpp_builder')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)",
+			"view.run_command('make_project')",
+			"print(\"\\n\"*100)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/S/Test/lighting",
+		"/S/Test/lighting/build",
+		"/S/Test/lighting/header",
+		"/S/Test/lighting/src",
+		"/C/dev/lib/include"
+	],
+	"file_history":
+	[
+		"/S/Test/lighting/Makefile",
+		"/S/Test/lighting/src/sh_camera3D.cpp",
+		"/S/Test/lighting/header/sh_camera3D.h",
+		"/S/Test/lighting/header/grid.h",
+		"/S/Test/lighting/src/sh_shpere.cpp",
+		"/S/Test/lighting/header/sh_shpere.h",
+		"/S/Test/lighting/src/grid.cpp",
+		"/S/Test/lighting/src/grid.cpp~",
+		"/C/dev/lib/include/Shar/headers/sh_camera3D.h",
+		"/C/dev/lib/include/Shar/src/sh_camera3D.cpp",
+		"/C/Program Files/Application Verifier/vrfauto.h",
+		"/C/Users/Sharo/Desktop/22.) Specular Lighting/22.) Specular Lighting/flyingCamera.h",
+		"/C/Users/Sharo/Desktop/22.) Specular Lighting/22.) Specular Lighting/flyingCamera.cpp",
+		"/C/dev/lib/include/Shar/headers/shar.h",
+		"/C/dev/lib/include/Shar/src/shar.cpp",
+		"/C/dev/lib/include/Shar/src/sharinit.cpp",
+		"/S/Test/lighting/header/sh_material.h",
+		"/C/dev/lib/include/Shar/headers/sharinit.h",
+		"/C/Program Files (x86)/Vim/vimfiles/bundle/powerline/setup.py",
+		"/S/Test/lighting/makefile",
+		"/C/dev/lib/include/Shar/Makefile",
+		"/S/Test/lighting/build/lighting.exe",
+		"/S/Test/shape_test/build/vrt3d.vert",
+		"/S/Test/lighting/lighting.sublime-project",
+		"/S/Test/lighting/build/frgt.glsl",
+		"/C/dev/lib/include/Shar/headers/sharfun.h",
+		"/C/dev/lib/include/Shar/headers/shaturtlegraph.h",
+		"/C/dev/lib/include/Shar/headers/SOIL.h",
+		"/C/dev/lib/include/Shar/headers/sharsimplelib.h",
+		"/S/Sharo/Imgur/Text/1.1) Setup Part, Visual Studio Path",
+		"/S/Test/lighting/src/frgt.glsl",
+		"/S/Test/lighting/src/vert.glsl",
+		"/S/Test/lighting/src/main.cpp",
+		"/S/Test/shape_test/src/main.cpp",
+		"/F/Work/Projects/Todolist/ToDo/ToDo/AddNewItem.js",
+		"/C/Users/Sharo/AppData/Roaming/Sublime Text 3/Packages/User/CppBuilder.sublime-settings",
+		"/S/Test hello/Test/src/hello.cpp",
+		"/S/Test hello/Test/Makefile",
+		"/S/Test/Hello/src/test.cpp",
+		"/S/Test/Hello/Makefile",
+		"/C/Users/Sharo/Desktop/test.html",
+		"/S/Test/shape_test/build/vrt.vert",
+		"/S/Test/shape_test/build/fgt.frag",
+		"/S/Test/shape_test/src/sh_camera3D.cpp",
+		"/S/Test/shape_test/header/sh_camera3D.h",
+		"/S/Test/shape_test/header/light.h",
+		"/S/Test/shape_test/header/grid.h",
+		"/C/Users/Sharo/AppData/Local/Android/sdk/sources/android-21/android/widget/LinearLayout.java",
+		"/S/Test/shape_test/Makefile",
+		"/C/Users/Sharo/Desktop/meow.cpp",
+		"/C/Users/Sharo/Desktop/asdfa",
+		"/C/Users/Sharo/Desktop/esa",
+		"/C/Users/Sharo/Dropbox/University/3rd/Compiler/Book/Dragon Book/dragon-book-exercise-answers/ch01/1.3/1.3.md",
+		"/C/Users/Sharo/Desktop/test",
+		"/S/Sharo/RuRu/RuRu/test.py",
+		"/S/New folder/What.java",
+		"/S/New folder/Makefile",
+		"/C/Users/Sharo/Desktop/meow2.cpp",
+		"/C/Users/Sharo/Dropbox/University/3rd/Numerical Analysis/Assignment 4/Assignment4.java",
+		"/F/Sharo/Private/junk/Vid/bookmarks-2010-12-15.json",
+		"/S/Test/shape_test/src/grid.cpp",
+		"/S/Test/shape_test/src/meow.cpp",
+		"/C/Users/Sharo/Desktop/CCout.txt",
+		"/S/Test/shape_test/build/makes.txt",
+		"/S/Test/shape_test/build/COUt1.txt",
+		"/S/Test/shape_test/build/1.txt",
+		"/C/Users/Sharo/Desktop/matrixProjection/src/Matrices.h",
+		"/C/Users/Sharo/Desktop/matrixProjection/src/cameraSimple.h",
+		"/S/Test/Projection/test.cpp",
+		"/C/dev/lib/include/Shar/src/sharfun.cpp",
+		"/C/Users/Sharo/AppData/Local/Temp/Rar$DIa0.909/Timer.h",
+		"/C/Users/Sharo/AppData/Local/Temp/Rar$DIa0.371/Timer.cpp",
+		"/S/Test/shape_test/src/sh_circle.cpp",
+		"/S/Test/shape_test/src/sh_shapes.cpp",
+		"/S/Test/shape_test/header/sh_circle.h",
+		"/S/Test/shape_test/header/sh_shapes.h",
+		"/C/Users/Sharo/Desktop/intent/AndroidManifest.xml",
+		"/C/Users/Sharo/Desktop/intent/res/layout/activity_main.xml",
+		"/C/Users/Sharo/Desktop/What Marius Said/Collision between Objects.txt",
+		"/C/Users/Sharo/Desktop/What Marius Said/Extra information",
+		"/C/Users/Sharo/Desktop/What Matthew Said/Image Processing Stuff",
+		"/C/Users/Sharo/Desktop/4.70.1_REX_Link.txt",
+		"/S/Sharo/RuRu/RuRu/1.txt",
+		"/S/Test/shape_test/build/vertex.glsl",
+		"/S/Test/shape_test/build/vertex.vert",
+		"/S/Test/shape_test/build/vrt.glsl",
+		"/S/Test/shape_test/build/fgt.glsl",
+		"/S/Test/shape_test/src/fgt.glsl",
+		"/S/Test/shape_test/src/vrt.glsl",
+		"/S/Test/shape_test/shape_test.sublime-project",
+		"/S/Test/shape_test.cpp/src/main.cpp",
+		"/S/Test/shape_test.cpp/build/vertex.vert",
+		"/S/Test/shape_test.cpp/Makefile",
+		"/C/dev/lib/include/Shar/sharinclude.h",
+		"/S/Test/Projection/Projection.sublime-project",
+		"/S/Test/shape_test.cpp/shape_test.cpp.sublime-project",
+		"/S/Work/Graphics/MyFiles/Chapter3/colorcub.cpp",
+		"/C/dev/lib/include/Shar/shar.h",
+		"/C/dev/lib/include/glm/gtc/matrix_transform.inl",
+		"/C/dev/lib/include/glm/gtc/matrix_transform.hpp",
+		"/C/dev/lib/include/Shar/sharfunc.h",
+		"/S/Test/Projection/src/test.cpp",
+		"/C/Users/Sharo/Desktop/ViewMatrixDemo/inc/Camera.h",
+		"/C/Users/Sharo/Desktop/ViewMatrixDemo/src/Camera.cpp",
+		"/C/dev/lib/include/Shar/4x4inverse",
+		"/S/Test/Projection/build/colorcubevert.glsl",
+		"/S/Work/Graphics/MyFiles/Chapter3/colorcubevert.glsl",
+		"/S/Test/Projection/build/colorcubefrag.glsl",
+		"/S/Test/Projection/Makefile",
+		"/C/dev/lib/include/Shar/sharinit.h",
+		"/S/Work/Graphics/MyFiles/Chapter2/ex23simpilelib.cpp",
+		"/S/Work/Graphics/MyFiles/Chapter2/gasket2d.cpp",
+		"/S/Work/Graphics/MyFiles/Chapter3/plane.cpp",
+		"/C/Users/Sharo/Desktop/examples/python/main.py",
+		"/C/Users/Sharo/Dropbox/Sharo/New Testing/EA/Lecture 1.tex",
+		"/C/Users/Sharo/Dropbox/Sharo/New Testing/EA/Lecture1.tex",
+		"/S/Test/Sharnack/Makefile",
+		"/S/Test/Sharnack/src/Test.cpp",
+		"/C/Users/Sharo/AppData/Roaming/Sublime Text 3/Packages/CppBuilder/CppBuilder.sublime-settings",
+		"/S/Test/Sharo/src/shar.cpp",
+		"/S/Work/MySelf/CppBuilder/Default (Windows).sublime-keymap",
+		"/S/Work/MySelf/CppBuilder/Main.sublime-menu",
+		"/S/Work/MySelf/CppBuilder/messages.json",
+		"/S/Work/MySelf/CppBuilder/README.md",
+		"/S/Work/MySelf/CppBuilder/messages/info.txt",
+		"/S/Test/Sharo/Makefile",
+		"/C/Users/Sharo/AppData/Roaming/Sublime Text 3/Packages/CppBuilder/Default (Linux).sublime-keymap",
+		"/C/Users/Sharo/AppData/Roaming/Sublime Text 3/Packages/CppBuilder/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"100",
+			"100.0",
+			"0f",
+			"frag_pos",
+			"lalala",
+			"z",
+			"yaw",
+			"\"",
+			"normalfrag",
+			"0.01",
+			"vec4",
+			"s[0",
+			",",
+			"cam_ke",
+			"normal",
+			"camera*",
+			"_b",
+			"_a",
+			"a",
+			"draw",
+			"vec4",
+			"2",
+			"(",
+			"cube",
+			"=",
+			" ",
+			"cubea",
+			"test",
+			"unit",
+			"a",
+			"v1",
+			"sh_camera",
+			"cam",
+			"tet",
+			"un",
+			"tet",
+			"ter",
+			"tert",
+			"div_trig_color",
+			"tetrahadron",
+			"0.1",
+			"diff_light",
+			"unit",
+			"diff",
+			"unit",
+			"test[cubea + screw_index++]",
+			"cout",
+			"unit",
+			"draw",
+			"cube_d",
+			"cub",
+			"cam",
+			"|",
+			"vec4 ",
+			"1",
+			"0.2",
+			"test",
+			"cout",
+			"normalize",
+			"triangle",
+			"divide_triangle",
+			"n",
+			"cur",
+			"vel",
+			"test",
+			"VERT",
+			"vert",
+			"\\",
+			"1",
+			"5",
+			"1",
+			":. ",
+			" ",
+			":.:",
+			"pos",
+			";",
+			"col",
+			"yaw",
+			"vel",
+			"fillGrid",
+			"somedir",
+			"0",
+			"*.",
+			"string(",
+			"return",
+			"str",
+			"if",
+			"Heun",
+			"ymod",
+			"std::",
+			"\" \"",
+			"date",
+			"v",
+			"											",
+			"																												",
+			"																											",
+			"																										",
+			"																									",
+			"																								",
+			"																							",
+			"																						",
+			"																					",
+			"																				",
+			"																			",
+			"																		",
+			"																	",
+			"																												",
+			"																											",
+			"																										",
+			"																									",
+			"																								",
+			"																							",
+			"																						",
+			"																					",
+			"																				",
+			"																			",
+			"																		",
+			"																	",
+			"																",
+			"															",
+			"														",
+			"													",
+			"												",
+			"											",
+			"'",
+			"dist2",
+			"dist)",
+			"dist"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			" "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9839,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7218,
+								7218
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"spell_check": true,
+							"syntax": "Packages/C++ Starting Kit/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4335.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/grid.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2637,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2290,
+								2290
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1425.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "header/grid.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 489,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								455,
+								456
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/C++/C.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "build/frgt.glsl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2562,
+								2562
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/Shader Syntax (GLSL HLSL Cg)/OpenGL SL.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "build/vert.glsl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1091,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								965,
+								959
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/Shader Syntax (GLSL HLSL Cg)/OpenGL SL.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CppBuilder":
+	{
+		"height": 277.0
+	},
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 291.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "lighting.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"S:\\Test\\Projection\\Projection.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 303.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Gaussian"
+			]
+		],
+		"width": 360.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 329.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,7 @@
+bin/
+4x4inverse
+multiplication
+transpose
+*.lib
+*.o
+*.exe
