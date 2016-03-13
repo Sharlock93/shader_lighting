@@ -2,7 +2,7 @@
 
 layout (location = 0) in vec4 vpos;
 layout (location = 2) uniform mat4 proj = mat4(1);
-layout (location = 3) uniform mat4 camera = mat4(1);
+layout (location = 3) uniform mat4 camera;// = mat4(1);
 layout (location = 4) uniform float uns = 50;
 layout (location = 5) in vec4 normal;
 layout (location = 6) in vec4 vcolor;
@@ -24,19 +24,21 @@ vec4 compnent_wise_product(vec4 a, vec4 b) {
 out vec4 light_position;
 
 void main() {
-    
-    mat4 trans = mat4(1, 0, 0, 0,
-                      0, 1, 0, 0,
-                      0, 0, 1, 0,
-                      0, 0, 0, 1);  
-  
-    color = vcolor;
-    normalfrag = camera*vec4(normal.xyz, 0);
-    frag_pos = camera*vpos;
-    vpos_test = proj*camera*vpos;
-    cam_pos = camera*cam_poss;  
-    light_position = (camera)*rotsa*ligh_pos;
+
+    /* if(false) {     */
+    /*     mat4 trans = mat4(1, 0, 0, 0, */
+    /*             0, 1, 0, 0, */
+    /*             0, 0, 1, 0, */
+    /*             0, 0, 0, 1);   */
+    /*  */
+    /*     color = vcolor; */
+    /*     normalfrag = camera*vec4(normal.xyz, 0); */
+    /*     frag_pos = camera*vpos; */
+    /*     vpos_test = proj*camera*vpos; */
+    /*     cam_pos = camera*cam_poss;   */
+    /*     light_position = (camera)*rotsa*ligh_pos; */
+    /* } */
+
+    vpos_test = vpos;
     gl_Position = proj*camera*vpos;
-
-
 }

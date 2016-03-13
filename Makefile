@@ -10,10 +10,10 @@ CC = g++
 OBJ_DIR = obj
 OBJ = grid.o main.o sh_shpere.o 
 BUILD_DIR = build
-SRC_DIR = S:\Test\lighting\src
+SRC_DIR = src
 
-$(BUILD_DIR)\lighting.exe: $(addprefix $(OBJ_DIR)\,$(OBJ)) 
-	 $(CC) $(FLAGS) $(addprefix $(OBJ_DIR)\,$(OBJ)) -o $(BUILD_DIR)\lighting.exe $(LIB) $(LIBRARY)
+$(BUILD_DIR)\sphere.exe: $(addprefix $(OBJ_DIR)\,$(OBJ)) 
+	 $(CC) $(FLAGS) $(addprefix $(OBJ_DIR)\,$(OBJ)) -o $(BUILD_DIR)\sphere.exe $(LIB) $(LIBRARY)
 
 $(OBJ_DIR)\grid.o: $(SRC_DIR)\grid.cpp 
 	 $(CC) $(FLAGS) -c $(SRC_DIR)\grid.cpp -o $(OBJ_DIR)\grid.o $(HEADER)

@@ -12,7 +12,9 @@
 
 #include <grid.h>
 #include <cmath>
+#include <random>
 using namespace std;
+
 
 void cube();
 void cube(int a);
@@ -36,6 +38,7 @@ struct vertex {
 #define GLM_FORCE_RADIANS
 
 #include <glm/glm.hpp>
+#include <glm/ext.hpp>
 #include <glm/gtx/transform.hpp>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
@@ -68,12 +71,15 @@ const int points_per_triangle = 3;
 const int triangle_per_div = 4;
 const int triangle_per_tertrahadron = 4;
 
-const int cube_div = 7;
+const int cube_div = 6;
 
 const int face = 6;
 const int quad_per_face = pow(4, cube_div);
 const int triangle_per_quad = 2;
 
+typedef point2 vec2;
+
+point2 buffer[1024]; 
 
 const int draw = ( pow(triangle_per_div, subs)) * points_per_triangle * triangle_per_tertrahadron;
 
@@ -161,11 +167,13 @@ void cube(int a) {
     quad_div(v[3], v[2], v[6], v[7], a); //face 6
 }
 
-glm::vec3 eye(0, -0.5, 0);
-glm::vec3 at(0, 0, -1);
+glm::vec3 eye(0, 10, 10);
+glm::vec3 at(0, 0, 0);
 glm::vec3 up(0, 1, 0);
 
 float field_view = 0;
+
+float zoom = 0;
 
 void cam_keys(GLFWwindow *window, sh_camera3D &cam, sh_camera3D &cam2) {
     static double x = 0;
@@ -175,14 +183,17 @@ void cam_keys(GLFWwindow *window, sh_camera3D &cam, sh_camera3D &cam2) {
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
         cam.move_forward(vel);
+        zoom += 0.1;
     }
 
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
         
         cam.move_forward(-vel);
+        zoom -= 0.1;
     }
 
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+
         cam.move_left(-vel);
     }
 
@@ -190,105 +201,104 @@ void cam_keys(GLFWwindow *window, sh_camera3D &cam, sh_camera3D &cam2) {
         
         cam.move_left(vel);
     }
-
-
-
     
+        // std::cout << cam.get_position() << std::endl;
     cam.increase_pitch((-2.0 * y / 500.0 + 1.0)*20);
     cam.increase_yaw  ( -(2.0 * x / 500.0 - 1.0)*20);
 }
 
+void cam_key(GLFWwindow *window) {
+
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+        zoom += 0.1;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) { 
+        zoom -= 0.1;
+    }
+}
+
+
 float t = 0;
+
+vec4 cube_buffer[1024];
+
+int cuber_index = 0;
+
+void quad_make(vec4 a, vec4 b, vec4 c, vec4 d) {
+    cube_buffer[cuber_index++] = a;
+    cube_buffer[cuber_index++] = b;
+    cube_buffer[cuber_index++] = c;
+
+    cube_buffer[cuber_index++] = a;
+    cube_buffer[cuber_index++] = c;
+    cube_buffer[cuber_index++] = d;
+}
+
+void make_cube() {
+    quad_make(v[0], v[1], v[2], v[3]);
+    quad_make(v[1], v[5], v[6], v[2]); 
+    quad_make(v[5], v[4], v[7], v[6]);
+    quad_make(v[4], v[0], v[3], v[7]); 
+    quad_make(v[1], v[0], v[4], v[5]);
+    quad_make(v[3], v[2], v[6], v[7]);
+}
+
+
 
 int main(int argc, char ** argv) {
     GLFWwindow *window = init();
-    sh_camera3D cam(vec4(0, 0, 10, 1), vec4(0, 0, 0, 1), vec4(0, 1, 0, 1));
-    sh_camera3D cam2(vec4(-10, 0, 0, 1), vec4(0, 0, 0, 1), vec4(0, 1, 0, 1));
-    
-    cube(cube_div);
-    // glViewport(0, 0, 250, 250);
-    
+
+    make_cube();
+ 
+#if 1
     GLuint vbo;
     glGenBuffers(1, &vbo);
+
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(test), test, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(cube_buffer), &cube_buffer, GL_STATIC_DRAW);
+
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
 
-    GLuint vbocolor;
-    glGenBuffers(1, &vbocolor);
-    glBindBuffer(GL_ARRAY_BUFFER, vbocolor);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(color), color, GL_STATIC_DRAW);
-    glEnableVertexAttribArray(6);
-    glVertexAttribPointer(6, 4, GL_FLOAT, GL_FALSE, 0, 0);
-    
-    GLuint vbo2;
-    glGenBuffers(1, &vbo2);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo2);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(normals), normals, GL_STATIC_DRAW);
-    glEnableVertexAttribArray(5);
-    glVertexAttribPointer(5, 4, GL_FLOAT, GL_FALSE, 0, 0);
-    
+
+    sh_camera3D cam(vec4(0, 10, 10, 1), vec4(0, 0, 0, 1), vec4(0, 1, 0, 1));
+
+    // sh_shpere test;
+    // cout << cam.get_matrix() << endl;
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED); 
-    
-    // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
     glEnable(GL_DEPTH_TEST);
 
-    // sh_shpere tas();
-    grid te(20, 20, 20);
+    glEnable(GL_MULTISAMPLE);
+
+
+
+    int detail = 0;
+    int num = pow(2, detail) + 1;
+    grid t(10, 10, num);
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
+
+    glLineWidth(2.0);
+    t.seed_height_map(1);
 
     while (!glfwWindowShouldClose(window)) { 
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
             glfwSetWindowShouldClose(window, true);
         }
-
-        cam_keys(window, cam, cam2);
-
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-
-        GLuint vert = shamkshader(GL_VERTEX_SHADER, "vert.glsl");
-        GLuint frgt = shamkshader(GL_FRAGMENT_SHADER, "frgt.glsl");
-        GLuint prog = shamkprogram(vert, frgt);
-        glUseProgram(prog);
         
-        glBindBuffer(GL_ARRAY_BUFFER, vbo);
-        glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
-        glUniformMatrix4fv(2, 1, GL_TRUE, shaperspective(45.0, 1.0, 0.1, 100));
-        // glUniformMatrix4fv(2, 1, GL_TRUE, shaortho(-10.0f, 10.0f, 10.0f, -10.0, -10, 10));
-        
-        glUniformMatrix4fv(9, 1, GL_TRUE, sharotatey(t++));        
 
-
-        // glViewport(0, 0, 250, 500);
-        glUniformMatrix4fv(3, 1, GL_TRUE, cam.get_matrix());        
-
-        vec4 pos = cam.get_position();
-        glUniform4fv(7, 1, &pos[0]);
-        glDrawArrays(GL_TRIANGLES, 0, cubea);
-
-        
-        // glViewport(250, 0, 250, 500);        
-        // glUniformMatrix4fv(3, 1, GL_TRUE, cam2.get_matrix());
-        
-        // pos = vec4(-10, 0, 0, 1);
-        // glUniform4fv(7, 1, &pos[0]);
-        // glDrawArrays(GL_TRIANGLES, 0, cubea);
-
-        std::cout << cam.get_position() << std::endl;
-
-        te.render();
-
-        
-        
+        cam_keys(window, cam, cam);
+        glUniformMatrix4fv(3, 1, GL_TRUE, cam.get_matrix());
+        // glDrawArrays(GL_TRIANGLES, 0, 6*2*3);
+        t.render();
         glfwSwapBuffers(window);
-
-
-
         glfwPollEvents();
     }
-
+#endif
     return 0;
 }
 
@@ -301,6 +311,7 @@ GLFWwindow* init() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    glfwWindowHint(GLFW_SAMPLES, 8);
 
     window = glfwCreateWindow(500, 500, "Lighting", nullptr, nullptr);
 
@@ -322,8 +333,8 @@ GLFWwindow* init() {
     glBindVertexArray(vao);
 
 
-    // glUniformMatrix4fv(2, 1, GL_TRUE, shaperspective(90.0f, 1.0f, 0.1f, 1000.0));
-    glUniformMatrix4fv(2, 1, GL_TRUE, shaortho(-100.0f, 100.0f, 100.0f, -100.0, -100, 100));
+    glUniformMatrix4fv(2, 1, GL_TRUE, shaperspective(100.0f, 1.0f, 0.1f, 1000.0));
+    // glUniformMatrix4fv(2, 1, GL_TRUE, shaortho(-100.0f, 100.0f, 100.0f, -100.0, -100, 100));
     return window;
 }
 
@@ -352,3 +363,4 @@ void quad_each(vertex &a, vertex &b, vertex &c, vertex &d) {
     color[screw_index] = d.color;
     normals[screw_index++] = vec4(d.normal.x, d.normal.y, d.normal.z, 0);
 }
+
