@@ -4,7 +4,7 @@ LIB_DIR = C:\dev\lib\lib-glew\Release\x64 C:\dev\lib\lib-mingw C:\dev\lib\lib-sh
 LIB = $(addprefix -L, $(LIB_DIR))
 LIB_NAMES = glfw3 glew32s opengl32 sharo gdi32
 LIBRARY = $(addprefix -l,$(LIB_NAMES))
-CCOPTION = Wall std=gnu++11 D__USE_MINGW_ANSI_STDIO=1
+CCOPTION = std=gnu++11 D__USE_MINGW_ANSI_STDIO=1
 FLAGS = $(addprefix -,$(CCOPTION))
 CC = g++
 OBJ_DIR = obj

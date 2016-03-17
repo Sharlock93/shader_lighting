@@ -6,9 +6,10 @@
 #include <Shar\headers\sharfun.h>
 #include <Shar\headers\sharinit.h>
 #include <Shar\headers\sh_camera3D.h>
-
+#define _WINDOWS
 #include <sh_material.h>
 // #include <sh_shpere.h>
+
 
 #include <grid.h>
 #include <cmath>
@@ -182,24 +183,33 @@ void cam_keys(GLFWwindow *window, sh_camera3D &cam, sh_camera3D &cam2) {
     glfwGetCursorPos(window, &x, &y);
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+
         cam.move_forward(vel);
+        if(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+            cam.move_forward(vel*5);
         zoom += 0.1;
     }
 
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
         
         cam.move_forward(-vel);
+        if(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+            cam.move_forward(-vel*5);
         zoom -= 0.1;
     }
 
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
 
         cam.move_left(-vel);
+        if(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+            cam.move_left(-vel*5);
     }
 
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
         
         cam.move_left(vel);
+        if(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+            cam.move_left(vel*5);
     }
     
         // std::cout << cam.get_position() << std::endl;
@@ -272,16 +282,19 @@ int main(int argc, char ** argv) {
 
     glEnable(GL_MULTISAMPLE);
 
-
-
-    int detail = 0;
-    int num = pow(2, detail) + 1;
-    grid t(10, 10, num);
+    int detail = 8;
+    int num = pow(2, detail);
+    grid t(50, 50, num);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
 
-    glLineWidth(2.0);
-    t.seed_height_map(1);
+    // glLineWidth(2.0);
+    t.seed_height_map(20);
+
+    // for(int i = 0; i < t.get_point_size(); ++i) {
+    //     if(i%( num+1 ) == 0) cout << std::endl << "i: " << setw(2) << i; 
+    //     std::cout << " " << setw(10) << t.get_points()[i].y;
+    // }
 
     while (!glfwWindowShouldClose(window)) { 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -363,4 +376,7 @@ void quad_each(vertex &a, vertex &b, vertex &c, vertex &d) {
     color[screw_index] = d.color;
     normals[screw_index++] = vec4(d.normal.x, d.normal.y, d.normal.z, 0);
 }
+
+
+
 
