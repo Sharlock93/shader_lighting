@@ -13,9 +13,8 @@ public:
 
     void render();
     vec3* get_points();
-    int get_point_size();
-
-    void seed_height_map(float x);
+    int get_num_points();
+    void seed_height_map(float *x);
 private:
     GLuint _vbo;
     GLuint _index_vbo;

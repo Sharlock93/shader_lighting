@@ -9,7 +9,7 @@
 #define _WINDOWS
 #include <sh_material.h>
 // #include <sh_shpere.h>
-
+#include <sh_diamond_square.h>
 
 #include <grid.h>
 #include <cmath>
@@ -274,28 +274,28 @@ int main(int argc, char ** argv) {
 
     sh_camera3D cam(vec4(0, 10, 10, 1), vec4(0, 0, 0, 1), vec4(0, 1, 0, 1));
 
-    // sh_shpere test;
-    // cout << cam.get_matrix() << endl;
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED); 
 
     glEnable(GL_DEPTH_TEST);
 
     glEnable(GL_MULTISAMPLE);
 
-    int detail = 8;
-    int num = pow(2, detail);
-    grid t(50, 50, num);
+    int detail = 2;
+    int num = pow(2, detail) + 1;
+    float *height_map = (float*) malloc(sizeof(float)*num*num);
+
+    diamond_square( height_map, num-1, 1, 20);
+
+    for(int i = 0; i < num*num; ++i) {
+        if(i%num == 0 ) std::cout << std::endl;
+        std::cout << height_map[i] << " ";
+    }
+
+    grid t(50, 50, num-1);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
 
-    // glLineWidth(2.0);
-    t.seed_height_map(20);
-
-    // for(int i = 0; i < t.get_point_size(); ++i) {
-    //     if(i%( num+1 ) == 0) cout << std::endl << "i: " << setw(2) << i; 
-    //     std::cout << " " << setw(10) << t.get_points()[i].y;
-    // }
-
+    t.seed_height_map(height_map);
     while (!glfwWindowShouldClose(window)) { 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
@@ -376,6 +376,7 @@ void quad_each(vertex &a, vertex &b, vertex &c, vertex &d) {
     color[screw_index] = d.color;
     normals[screw_index++] = vec4(d.normal.x, d.normal.y, d.normal.z, 0);
 }
+
 
 
 

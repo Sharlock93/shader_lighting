@@ -8,7 +8,7 @@ CCOPTION = std=gnu++11 D__USE_MINGW_ANSI_STDIO=1
 FLAGS = $(addprefix -,$(CCOPTION))
 CC = g++
 OBJ_DIR = obj
-OBJ = grid.o main.o sh_shpere.o 
+OBJ = grid.o main.o sh_shpere.o
 BUILD_DIR = build
 SRC_DIR = src
 
