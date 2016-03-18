@@ -280,18 +280,26 @@ int main(int argc, char ** argv) {
 
     glEnable(GL_MULTISAMPLE);
 
-    int detail = 8;
+    int detail = 6;
     int num = pow(2, detail) + 1;
+
+    std::cout << "Test, num: " << num << " detail " << detail  << std::endl;
+
     float *height_map = (float*) malloc(sizeof(float)*num*num);
+    for(int i = 0; i < num*num; ++i) {
+        // if(i%num == 0 ) std::cout << std::endl;
+        // std::cout << height_map[i] << " ";
+        height_map[i] = 0;
+    }
 
-    diamond_square( height_map, num-1, 1, 10);
+    diamond_square( height_map, num-1, 1, 20);
 
-    // for(int i = 0; i < num*num; ++i) {
-    //     if(i%num == 0 ) std::cout << std::endl;
-    //     std::cout << height_map[i] << " ";
-    // }
+    for(int i = 0; i < num*num; ++i) {
+        if(i%( num) == 0) cout << std::endl << "i: " << setw(2) << i; 
+        std::cout << " " << setw(10) << height_map[i];
+    }
 
-    grid t(100, 100, num-1);
+    grid t(50, 50, num-1);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
 
