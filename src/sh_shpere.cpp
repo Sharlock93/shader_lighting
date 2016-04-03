@@ -3,6 +3,18 @@
 #include <cmath>
 using namespace std;
 
+vec4 unit( const vec4& p ) {
+    double len = p.x * p.x + p.y * p.y + p.z * p.z;
+    vec4 t;
+    //if ( len > DivideByZeroTolerance ) {
+        t = p / sqrt(len);
+        t.w = 1.0;
+    //}
+    
+    return t;
+}
+
+
 struct vertex {
     vec4 vec;
     vec4 color;

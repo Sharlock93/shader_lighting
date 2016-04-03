@@ -6,38 +6,21 @@
 #include <Shar\headers\sharfun.h>
 #include <Shar\headers\sharinit.h>
 #include <Shar\headers\sh_camera3D.h>
-#define _WINDOWS
+
+#include <stdio.h>
+#include <stdint.h>
+
 #include <sh_material.h>
-// #include <sh_shpere.h>
 #include <sh_diamond_square.h>
+#include <sh_bmp_reader.h>
 
 #include <grid.h>
 #include <cmath>
-#include <random>
+
 using namespace std;
 
 
-void cube();
-void cube(int a);
-void triangle_each_color(vec4 a, vec4 b, vec4 c, vec4 color_a, vec4 color_b, vec4 color_c);
-const GLfloat  DivideByZeroTolerance = GLfloat(1.0e-07);
-// ToDo(): highlight ToDo words ?
-typedef struct light {
-    vec4 amb; //ambient color
-    vec4 diff; //diffuse color
-    vec4 spec; //specular color
-
-    vec4 pos; //position of the light, if pos.w  = 0, direction.
-} light;
-
-struct vertex {
-    vec4 vec;
-    vec4 color;
-    vec4 normal;
-};
-
 #define GLM_FORCE_RADIANS
-
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 #include <glm/gtx/transform.hpp>
@@ -46,135 +29,17 @@ struct vertex {
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-sh_material lamake = {
-                    vec4(0.1, 0.1, 0.1, 1), //amb
-                    vec4(0.5, 0.5, 0.5, 1), //diffs
-                    vec4(1, 1, 1, 1), //spec
-                    vec4(0.1, 0.1, 1, 1.0), // emissi
-                    100.0
-                    }; //shnini
-    
-light firstLight = 
-                {
-                    vec4(1, 1, 1, 1), //amb color
-                    vec4(1, 1, 1, 1), //diff
-                    vec4(1, 1, 1, 1), //spec
-                    vec4(2, 2, 2, 1) //pos
-                };
-   
 
 GLFWwindow* init();
 
 float vel = 0.1;
-
-const int subs = 5;
-const int points_per_triangle = 3;
-const int triangle_per_div = 4;
-const int triangle_per_tertrahadron = 4;
-
-const int cube_div = 6;
-
-const int face = 6;
-const int quad_per_face = pow(4, cube_div);
-const int triangle_per_quad = 2;
-
-typedef point2 vec2;
-
-point2 buffer[1024]; 
-
-const int draw = ( pow(triangle_per_div, subs)) * points_per_triangle * triangle_per_tertrahadron;
-
-const int cubea = face*quad_per_face*triangle_per_quad*points_per_triangle;
-vec4 test[cubea];
-vec4 color[cubea];
-
-vec4 normals[cubea];
-
-vec4 v[8] = {
-             vec4(-1,  1, 1, 1.0),
-             vec4( 1,  1, 1, 1.0),
-             vec4( 1, -1, 1, 1.0),
-             vec4(-1, -1, 1, 1.0),
-
-             vec4(-1,  1, -1, 1.0),
-             vec4( 1,  1, -1, 1.0),
-             vec4( 1, -1, -1, 1.0),
-             vec4(-1, -1, -1, 1.0)
-            };
-
-vec4 compnent_wise_product(vec4 a, vec4 b) {
-    return vec4(a.x * b.x, a.y*b.y, a.z*b.z, a.w*b.w);
-}
-
-
-void quad_each(vec4 a, vec4 b, vec4 c, vec4 d,
-               vec4 color_a, vec4 color_b, vec4 color_c, vec4 color_d,
-               vec4 normal_a, vec4 normal_b, vec4 normal_c, vec4 normal_d);
-
-void quad_each(vertex &a, vertex &b, vertex &c, vertex &d);
-
-
-
-int screw_index = 0;
-int normal_index = 0;
-
-vec4 unit( const vec4& p ) {
-    double len = p.x * p.x + p.y * p.y + p.z * p.z;
-    vec4 t;
-    //if ( len > DivideByZeroTolerance ) {
-        t = p / sqrt(len);
-        t.w = 1.0;
-    //}
-    
-    return t;
-}
-
-void quad_div(vec4 a, vec4 b, vec4 c, vec4 d, int num_div) {
-    if(num_div > 0) {
-        vec4 ab = unit(a + b);
-        vec4 bc = unit(b + c);
-        vec4 cd = unit(c + d);
-        vec4 ad = unit(a + d);
-        vec4 bd = unit(b + d);
-    
-        quad_div(unit(a),  unit(ab), unit(bd), unit(ad), num_div-1);
-        quad_div(unit(b),  unit(bc), unit(bd), unit(ab), num_div-1);
-        quad_div(unit(bd), unit(bc), unit(c ), unit(cd), num_div-1);
-        quad_div(unit(bd), unit(cd), unit(d ), unit(ad), num_div-1);
-
-    } else {
-        vec4 norm = unit(cross(a-c, a-b)); 
-        vertex a_v{unit(a), vec4(1, 1, 1, 1),norm};
-        vertex b_v{unit(b), vec4(1, 1, 1, 1),norm};
-        vertex c_v{unit(c), vec4(1, 1, 1, 1),norm};
-        vertex d_v{unit(d), vec4(1, 1, 1, 1),norm};
-        //
-        // vertex a_v{unit(a), vec4(1, 1, 1, 1), (a)};
-        // vertex b_v{unit(b), vec4(1, 1, 1, 1), (b)};
-        // vertex c_v{unit(c), vec4(1, 1, 1, 1), (c)};
-        // vertex d_v{unit(d), vec4(1, 1, 1, 1), (d)};
-        //
-        quad_each(a_v, b_v, c_v, d_v);    
-
-    }
-}
-
-void cube(int a) {
-    quad_div(v[0], v[1], v[2], v[3], a); //face 1
-    quad_div(v[1], v[5], v[6], v[2], a); //face 2
-    quad_div(v[5], v[4], v[7], v[6], a); //face 3
-    quad_div(v[4], v[0], v[3], v[7], a); //face 4
-    quad_div(v[1], v[0], v[4], v[5], a); //face 5
-    quad_div(v[3], v[2], v[6], v[7], a); //face 6
-}
+float speed = 10;
 
 glm::vec3 eye(0, 10, 10);
 glm::vec3 at(0, 0, 0);
 glm::vec3 up(0, 1, 0);
 
 float field_view = 0;
-
-float zoom = 0;
 
 void cam_keys(GLFWwindow *window, sh_camera3D &cam, sh_camera3D &cam2) {
     static double x = 0;
@@ -186,140 +51,88 @@ void cam_keys(GLFWwindow *window, sh_camera3D &cam, sh_camera3D &cam2) {
 
         cam.move_forward(vel);
         if(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-            cam.move_forward(vel*5);
-        zoom += 0.1;
+            cam.move_forward(vel*speed);
     }
 
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
         
         cam.move_forward(-vel);
         if(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-            cam.move_forward(-vel*5);
-        zoom -= 0.1;
+            cam.move_forward(-vel*speed);
     }
 
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
-
         cam.move_left(-vel);
         if(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-            cam.move_left(-vel*5);
+            cam.move_left(-vel*speed);
     }
 
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
         
         cam.move_left(vel);
         if(glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-            cam.move_left(vel*5);
+            cam.move_left(vel*speed);
     }
     
-        // std::cout << cam.get_position() << std::endl;
+    //Todo(sharo): take this into the camera class? maybe?
+    // - this needs further explinations, as what these numbers mean.
     cam.increase_pitch((-2.0 * y / 500.0 + 1.0)*20);
     cam.increase_yaw  ( -(2.0 * x / 500.0 - 1.0)*20);
 }
 
-void cam_key(GLFWwindow *window) {
-
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
-        zoom += 0.1;
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) { 
-        zoom -= 0.1;
-    }
-}
-
-
-float t = 0;
-
-vec4 cube_buffer[1024];
-
-int cuber_index = 0;
-
-void quad_make(vec4 a, vec4 b, vec4 c, vec4 d) {
-    cube_buffer[cuber_index++] = a;
-    cube_buffer[cuber_index++] = b;
-    cube_buffer[cuber_index++] = c;
-
-    cube_buffer[cuber_index++] = a;
-    cube_buffer[cuber_index++] = c;
-    cube_buffer[cuber_index++] = d;
-}
-
-void make_cube() {
-    quad_make(v[0], v[1], v[2], v[3]);
-    quad_make(v[1], v[5], v[6], v[2]); 
-    quad_make(v[5], v[4], v[7], v[6]);
-    quad_make(v[4], v[0], v[3], v[7]); 
-    quad_make(v[1], v[0], v[4], v[5]);
-    quad_make(v[3], v[2], v[6], v[7]);
-}
-
-
 
 int main(int argc, char ** argv) {
     GLFWwindow *window = init();
-
-    make_cube();
  
-#if 1
-    GLuint vbo;
-    glGenBuffers(1, &vbo);
-
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(cube_buffer), &cube_buffer, GL_STATIC_DRAW);
-
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, 0, 0);
-
-
     sh_camera3D cam(vec4(0, 10, 10, 1), vec4(0, 0, 0, 1), vec4(0, 1, 0, 1));
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED); 
 
     glEnable(GL_DEPTH_TEST);
-
     glEnable(GL_MULTISAMPLE);
 
-    int detail = 6;
+     
+    int detail = 4;
     int num = pow(2, detail) + 1;
-
-    std::cout << "Test, num: " << num << " detail " << detail  << std::endl;
-
+    //
     float *height_map = (float*) malloc(sizeof(float)*num*num);
-    for(int i = 0; i < num*num; ++i) {
-        // if(i%num == 0 ) std::cout << std::endl;
-        // std::cout << height_map[i] << " ";
-        height_map[i] = 0;
-    }
+    
 
-    diamond_square( height_map, num-1, 1, 20);
+    float *height_temp = (float *) malloc(sizeof(float)*num*num);
 
-    for(int i = 0; i < num*num; ++i) {
-        if(i%( num) == 0) cout << std::endl << "i: " << setw(2) << i; 
-        std::cout << " " << setw(10) << height_map[i];
-    }
-
+    // diamond_square( height_map, num-1, 1, 20);
     grid t(50, 50, num-1);
-
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); 
-
-    t.seed_height_map(height_map);
+    // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+ 
+    // vec3 *p = t.get_points();
+    
     while (!glfwWindowShouldClose(window)) { 
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
+        cam_keys(window, cam, cam);
+
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
             glfwSetWindowShouldClose(window, true);
         }
-        
+        sh_bmp_img img = sh_read_bmp("test.bmp"); 
 
-        cam_keys(window, cam, cam);
+        for(int i = 0; i < img.height; ++i) {
+            int index_s = i*img.width;
+            for(int j = 0; j < img.width; ++j) { 
+                float point_s = (img.data[index_s + j].red/255.0f);
+                height_temp[index_s + j] =  point_s*20.0;
+            } 
+        }
+
+        delete[] img.orig_file_ptr; 
+   
+        t.seed_height_map(height_temp);    
+
         glUniformMatrix4fv(3, 1, GL_TRUE, cam.get_matrix());
-        // glDrawArrays(GL_TRIANGLES, 0, 6*2*3);
+
         t.render();
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-#endif
     return 0;
 }
 
@@ -358,34 +171,3 @@ GLFWwindow* init() {
     // glUniformMatrix4fv(2, 1, GL_TRUE, shaortho(-100.0f, 100.0f, 100.0f, -100.0, -100, 100));
     return window;
 }
-
-void quad_each(vertex &a, vertex &b, vertex &c, vertex &d) {
-    test[screw_index] = a.vec;
-    color[screw_index] = a.color;
-    normals[screw_index++] = vec4(a.normal.x, a.normal.y, a.normal.z, 0);
-
-    test[screw_index] = b.vec;
-    color[screw_index] = b.color;
-    normals[screw_index++] = vec4(b.normal.x, b.normal.y, b.normal.z, 0);
-
-    test[screw_index] = d.vec;
-    color[screw_index] = d.color;
-    normals[screw_index++] = vec4(d.normal.x, d.normal.y, d.normal.z, 0);
-    
-    test[screw_index] = b.vec;
-    color[screw_index] = b.color;
-    normals[screw_index++] = vec4(b.normal.x, b.normal.y, b.normal.z, 0);
-   
-    test[screw_index] = c.vec;
-    color[screw_index] = c.color;
-    normals[screw_index++] = vec4(c.normal.x, c.normal.y, b.normal.z, 0);
-
-    test[screw_index] = d.vec;
-    color[screw_index] = d.color;
-    normals[screw_index++] = vec4(d.normal.x, d.normal.y, d.normal.z, 0);
-}
-
-
-
-
-

@@ -15,9 +15,11 @@ public:
     vec3* get_points();
     int get_num_points();
     void seed_height_map(float *x);
-private:
+    void compute_normals();
+
     GLuint _vbo;
     GLuint _index_vbo;
+    GLuint _normal_vbo;
     int _drawpoint;
     float _width;
     float _height;
@@ -28,6 +30,7 @@ private:
     float _rect_height;
 
     vec3 *_points;
+    vec3 *_normals;
 
 };
 
