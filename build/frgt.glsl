@@ -1,28 +1,33 @@
 #version 450 core
 
+uniform vec4 cam_pos;
+uniform bool textured;
+
+in vec4 vert_norm;
+in vec4 vert_pos;
+in vec4 vert_color;
+
 out vec4 tcolol;
-in vec4 color;
-in vec4 normalfrag;
 
 in vec2 uv;
-in vec4 vert_pos;
 
-uniform sampler2D tex_sampler;
+layout(location = 12) uniform sampler2D my_tex;
 
-vec4 compnent_wise_product(vec4 a, vec4 b) {
-    return vec4(a.x * b.x, a.y*b.y, a.z*b.z, a.w*b.w);
-}
 void main() { 
-        // tcolol = texture(tex_sampler, vec2(uv.x, 1-uv.y)) + vec4(0.1, 0.1, 0.1, 1);
-    if(vert_pos.y > 15)  {
-        tcolol =  vec4(1);
-    } else if( vert_pos.y > 10 ) {
-        tcolol = vec4(116/255.0, 79/255.0, 4/255.0, 1);
-    } else if( vert_pos.y > 5 )  { 
-        tcolol = vec4(0, 0.85, 0, 1);
-    } else { 
-        tcolol = vec4(0, 0.5, 0, 1);
-    }
+    vec4 color_point = vec4(0.8, 0.8, 0.8, 1);
+
+    vec4 light_position = cam_pos;
+    vec4 direction_to_light = (light_position - vert_pos);
+    float legn = length(direction_to_light);
+    float diff_con = max(dot((normalize(direction_to_light)),
+                              normalize(vert_norm)), 0);
+
+    // tcolol = tcolol*color_point*diff_con;
+    /* tcolol = vert_color*color_point*diff_con + vec4(0.1, 0.1, 0.1, 1); */
+    if(textured)
+        tcolol =  texture(my_tex, vec2(uv.s, uv.t))*color_point*diff_con;
+    else
+        tcolol =  vert_color*color_point*diff_con + vec4(0.1, 0.1, 0.1, 1);
 
 }
 

@@ -47,7 +47,7 @@ void quad_div(vec4 *test, vec4 a, vec4 b, vec4 c, vec4 d, int num_div, int &scre
         quad_div(test, unit(bd), unit(cd), unit(d ), unit(ad), num_div-1, screw_index);
 
     } else {
-        vec4 norm = unit(cross(a-c, a-b)); 
+        // vec4 norm = unit(cross(a-c, a-b)); 
         // vertex a_v{unit(a), vec4(1, 1, 1, 1),norm};
         // vertex b_v{unit(b), vec4(1, 1, 1, 1),norm};
         // vertex c_v{unit(c), vec4(1, 1, 1, 1),norm};

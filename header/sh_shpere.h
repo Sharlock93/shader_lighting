@@ -11,8 +11,8 @@ public:
     ~sh_shpere();
     void render();
     int _index;
-    vec4 *_points;
     int _size;
 
+    vec4 *_points;
     GLuint _vbo;
 };

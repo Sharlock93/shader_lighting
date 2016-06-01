@@ -5,3 +5,5 @@ transpose
 *.lib
 *.o
 *.exe
+docs.gl
+*.zip
