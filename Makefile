@@ -8,15 +8,15 @@ CCOPTION = Wall std=gnu++11 D__USE_MINGW_ANSI_STDIO=1 static-libgcc static-libst
 FLAGS = $(addprefix -,$(CCOPTION))
 CC = g++
 OBJ_DIR = obj
-OBJ = grid.o main.o sh_shpere.o sh_cube.o sh_cone.o
+OBJ = sh_grid.o main.o sh_shpere.o sh_cube.o sh_cone.o
 BUILD_DIR = build
 SRC_DIR = src
 
 $(BUILD_DIR)\sphere.exe: $(addprefix $(OBJ_DIR)\,$(OBJ)) 
 	 $(CC) $(FLAGS) $(addprefix $(OBJ_DIR)\,$(OBJ)) -o $(BUILD_DIR)\sphere.exe $(LIB) $(LIBRARY)
 
-$(OBJ_DIR)\grid.o: $(SRC_DIR)\grid.cpp 
-	 $(CC) $(FLAGS) -c $(SRC_DIR)\grid.cpp -o $(OBJ_DIR)\grid.o $(HEADER)
+$(OBJ_DIR)\sh_grid.o: $(SRC_DIR)\sh_grid.cpp 
+	 $(CC) $(FLAGS) -c $(SRC_DIR)\sh_grid.cpp -o $(OBJ_DIR)\sh_grid.o $(HEADER)
 
 $(OBJ_DIR)\main.o: $(SRC_DIR)\main.cpp 
 	 $(CC) $(FLAGS) -c $(SRC_DIR)\main.cpp -o $(OBJ_DIR)\main.o $(HEADER)

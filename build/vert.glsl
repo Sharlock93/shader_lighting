@@ -11,6 +11,7 @@ layout (location = 5) uniform mat4 camera;// = mat4(1);
 layout (location = 6) uniform vec4 cam_pos;
 layout (location = 7) uniform bool textured = false;
 layout (location = 8) in vec2 uv_vert;
+layout (location  = 15) uniform int project = 1;
 
 
 out vec4 vert_norm;
@@ -21,10 +22,9 @@ out vec2 uv;
 
 
 void main() {
-    vert_pos = model_tran*vpos;
-    vert_color = color;
-    
+    vert_pos = model_tran*vpos; 
     uv = uv_vert;
+    vert_color = color;
 
     vec4 nors = normal;
     nors.w = 0;
